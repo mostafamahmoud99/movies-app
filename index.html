@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Movie App</title>
+  </head>
+  <body>
+    <!-- start header -->
+    <header>
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-6 my-2">
+            <div class="input border-1 border-bottom">
+              <input
+                type="text"
+                class="form-control bg-transparent border-0 text-white"
+                placeholder="get movies by word..."
+                id="searchGeneral"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 my-2">
+            <div class="input border-1 border-bottom">
+              <input
+                type="text"
+                class="form-control bg-transparent border-0 text-white"
+                placeholder="search..."
+                id="searchLocal"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row" id="rowData"></div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <!-- start sideBar -->
+    <section id="sideBar">
+      <div
+        class="sideBar-container d-flex flex-column justify-content-between p-4"
+      >
+        <ul class="list-unstyled">
+          <li class="py-2">
+            <a class="now_playing text-decoration-none text-white" href="#"
+              >Now playing</a
+            >
+          </li>
+          <li class="py-2">
+            <a class="popular text-decoration-none text-white" href="#"
+              >Popular</a
+            >
+          </li>
+          <li class="py-2">
+            <a class="top_rated text-decoration-none text-white" href="#"
+              >Top Rated</a
+            >
+          </li>
+          <li class="py-2">
+            <a class="trending text-decoration-none text-white" href="#"
+              >Trending</a
+            >
+          </li>
+          <li class="py-2">
+            <a class="upcoming text-decoration-none text-white" href="#"
+              >Upcoming</a
+            >
+          </li>
+          <li class="py-2">
+            <a class="text-decoration-none text-white" href="#contact"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <div class="copyRight text-white">
+          <span class="px-2"><i class="fab fa-facebook-f"></i></span>
+          <span class="px-2"><i class="fa-brands fa-twitter"></i></span>
+          <span class="px-2"><i class="fa-solid fa-globe"></i></span>
+          <p class="my-2 text-muted">
+            Copyright Â© 2019 All Rights <br />
+            Reserved.
+          </p>
+        </div>
+      </div>
+      <div
+        class="icons py-3 d-flex flex-column justify-content-between align-items-center bg-white shadow"
+      >
+        <img src="img/logo.png" class="w-50" alt="" />
+        <i class="fa-solid fa-bars fs-3" id="btn"></i>
+        <div class="text-center">
+          <i class="fa-solid fa-globe d-block my-2"></i>
+          <i class="fa-solid fa-share-nodes d-block my-2"></i>
+        </div>
+      </div>
+    </section>
+    <!-- end sideBar -->
+
+    <!-- start contact -->
+    <section id="contact">
+      <div class="container my-5">
+        <h2 class="text-light my-2" style="cursor: pointer" id="text-btn">
+          ContactUs...
+        </h2>
+        <div class="row">
+          <div class="col-md-6 my-3">
+            <div class="border-bottom my-2">
+              <input
+                type="text"
+                class="form-control bg-transparent border-0 text-white my-2"
+                placeholder="Enter Your Name"
+                id="userName"
+              />
+            </div>
+            <div class="alert alert-danger d-none" id="userAlert">
+              Your Name is not valid
+            </div>
+            <div class="border-bottom my-2">
+              <input
+                type="text"
+                class="form-control bg-transparent border-0 text-white my-2"
+                placeholder="Enter phone"
+                id="userPhone"
+              />
+            </div>
+            <div class="alert alert-danger d-none" id="phoneAlert">
+              Your Phone is not valid
+            </div>
+            <div class="border-bottom my-2">
+              <input
+                type="password"
+                class="form-control bg-transparent border-0 text-white my-2"
+                placeholder="Enter Password"
+                id="userPassword"
+              />
+            </div>
+            <div class="alert alert-danger d-none" id="passwordAlert">
+              Your Password is not valid
+            </div>
+          </div>
+
+          <div class="col-md-6 my-3">
+            <div class="border-bottom my-2">
+              <input
+                type="text"
+                class="form-control bg-transparent border-0 text-white my-2"
+                placeholder="Enter Your Email"
+                id="userEmail"
+              />
+            </div>
+            <div class="alert alert-danger d-none" id="emailAlert">
+              Your Email is not valid
+            </div>
+            <div class="border-bottom my-2">
+              <input
+                type="number"
+                class="form-control bg-transparent border-0 text-white my-2"
+                placeholder="Enter Age"
+                id="userAge"
+              />
+            </div>
+            <div class="alert alert-danger d-none" id="ageAlert">
+              Your Age is not valid
+            </div>
+            <div class="border-bottom my-2">
+              <input
+                type="password"
+                class="form-control bg-transparent border-0 text-white my-2"
+                placeholder="Enter repassword"
+                id="userRePassword"
+              />
+            </div>
+            <div class="alert alert-danger d-none" id="rePasswordAlert">
+              Your repassword is not valid
+            </div>
+          </div>
+        </div>
+        <button
+          type="submit"
+          disabled
+          id="submitBtn"
+          class="btn btn-outline-danger"
+        >
+          Submit
+        </button>
+      </div>
+    </section>
+    <!-- end contact -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
